@@ -51,7 +51,6 @@ footer {
     color: #666;
 }
 
-/* Responsividade com media queries */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -63,9 +62,27 @@ footer {
     }
 }
 
-/* Adicionar estilos personalizados para imagens */
 img {
-    max-width: 100%; /* A imagem nunca será maior que o container */
-    height: auto;    /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
     margin-top: 20px;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+header.dark-mode {
+    background-color: #444;
+}
+
+section.dark-mode {
+    background-color: #555;
+    color: #fff;
+}
+
+footer.dark-mode {
+    color: #aaa;
+}
