@@ -1,41 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Projeto Web - Grupo X está rodando");
+// Função para alternar o tema
+function toggleTheme() {
+  const body = document.body;
+  const currentTheme = body.classList.contains('light-theme') ? 'light' : 'dark';
 
-    // Alternância de tema (modo claro/escuro)
-    const toggleThemeButton = document.getElementById("toggle-theme");
-    toggleThemeButton.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode");
-        document.querySelector("header").classList.toggle("dark-mode");
-        document.querySelector("footer").classList.toggle("dark-mode");
-        document.querySelectorAll("section").forEach(section => section.classList.toggle("dark-mode"));
-        document.querySelectorAll("form").forEach(form => form.classList.toggle("dark-mode"));
-    });
+  // Alterna entre os temas
+  if (currentTheme === 'light') {
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');  // Salva a preferência no localStorage
+  } else {
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
+    localStorage.setItem('theme', 'light');  // Salva a preferência no localStorage
+  }
+}
 
-    // Validação de formulário de contato
-    const contactForm = document.getElementById("contact-form");
-    contactForm.addEventListener("submit", function (event) {
-        const nameInput = document.getElementById("name");
-        const emailInput = document.getElementById("email");
-        const messageInput = document.getElementById("message");
+// Verifica a preferência de tema salva no localStorage e aplica o tema
+window.onload = () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+  } else {
+    document.body.classList.add('light-theme');
+  }
 
-        if (!nameInput.value || !emailInput.value || !messageInput.value) {
-            alert("Por favor, preencha todos os campos do formulário.");
-            event.preventDefault(); // Impede o envio do formulário
-        } else if (!validateEmail(emailInput.value)) {
-            alert("Por favor, insira um e-mail válido.");
-            event.preventDefault(); // Impede o envio do formulário
-        }
-    });
+  // Exibe a mensagem de boas-vindas
+  const welcomeMessage = document.getElementById('welcome-message');
+  if (welcomeMessage) {
+    welcomeMessage.style.display = 'block';  // Exibe a mensagem
+  }
+};
 
-    // Função de validação de e-mail
-    function validateEmail(email) {
-        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        return re.test(email);
-    }
-
-    // Exibição de mensagem de boas-vindas
-    const welcomeButton = document.getElementById("welcome-button");
-    welcomeButton.addEventListener("click", function () {
-        alert("Bem-vindo ao nosso site! Estamos felizes em tê-lo aqui.");
-    });
-});
+// Adiciona um ouvinte de evento para o botão de alternância de tema
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
