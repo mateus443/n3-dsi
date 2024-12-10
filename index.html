@@ -1,0 +1,103 @@
+<!DOCTYPE html> <!--Esta declaração define o documento como HTML5. É uma instrução ao navegador para renderizar a página de acordo com o padrão HTML5-->
+<html lang="pt-br">
+<!--A tag <html> é o contêiner principal do documento HTML. O atributo lang="pt-br" 
+    informa ao navegador que o idioma da página é o português do Brasil. Isso é importante para a acessibilidade e 
+    otimização para motores de busca.-->
+
+<!--A tag <head> contém metadados sobre o documento, como o título, links para arquivos CSS, scripts, etc.-->
+<head>
+    <meta charset="UTF-8"> <!--Define a codificação de caracteres como UTF-8, que é compatível com praticamente todos os caracteres em diferentes idiomas.-->
+    
+    <!--Faz a página ser responsiva. 
+    Isso garante que o layout seja ajustado corretamente em diferentes dispositivos, como celulares, tablets e desktops.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto Web Responsivo - Grupo X</title>  <!--Define o título que aparece na aba do navegador-->
+    <!-- Importando o Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<!--A tag <body> contém todo o conteúdo visível da página, como textos, imagens, links, botões e outras mídias.-->
+<body>
+    <!-- Início do Menu de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!--A tag <nav> representa a seção de navegação.-->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Projeto Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Fim do Menu de Navegação -->
+
+
+    <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+        <h1 class="text-center">Bem-vindo ao Projeto Web</h1>
+        
+        <!-- Botão para abrir uma janela modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Abrir Janela Modal
+        </button>
+
+        <!-- Janela Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Janela Modal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Alunos: Adicione conteúdo da janela aqui -->
+                        Este é um exemplo de uma janela modal criada com Bootstrap.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adicione outras seções aqui -->
+        <section class="mt-5">
+            <h2>Funcionalidades</h2>
+            <p><!-- Alunos: Detalhe as funcionalidades aqui --></p>
+        </section>
+       
+        </div>
+        <!-- Adicionando a Imagem -->
+        <div class="text-center mt-4">
+            <img src="img/imgProjetoWeb.jpg" alt="Imagem de Exemplo" class="img-fluid rounded">
+        </div>    
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <div class="container">
+            <p>Projeto Web - Grupo X</p>
+            <p>&copy; 2024 - Todos os direitos reservados</p>
+            <p>
+                <a href="#" class="text-white me-3">Política de Privacidade</a>
+                <a href="#" class="text-white">Termos de Serviço</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Importando Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
