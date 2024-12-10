@@ -69,23 +69,3 @@ img {
     height: auto;    /* Mantém a proporção da imagem */
     border-radius: 10px; /* Adiciona bordas arredondadas */
     margin-top: 20px;
-}
-
-/* Estilos para o modo escuro */
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-header.dark-mode {
-    background-color: #444;
-}
-
-section.dark-mode {
-    background-color: #555;
-    color: #fff;
-}
-
-footer.dark-mode {
-    color: #aaa;
-}
