@@ -19,8 +19,4 @@ document.addEventListener("DOMContentLoaded", function () {
         clickCount++;
         document.getElementById('clickCount').textContent = clickCount;
     });
-
-    // Alunos: Adicione interações com o DOM, eventos e lógica do projeto aqui
-
-    // Esse arquivo será trabalhado nas próximas aulas. 
 });
