@@ -1,34 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site com Tema Claro e Escuro</title>
-  <link rel="stylesheet" href="public/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Web Responsivo - Grupo X</title>
+    <!-- Importando o Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Bem-vindo ao nosso site!</h1>
-    <!-- Botão para alternar o tema -->
-    <button id="theme-toggle">Alternar Tema</button>
-  </header>
+    <!-- Início do Menu de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Projeto Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Fim do Menu de Navegação -->
 
-  <!-- Mensagem de boas-vindas -->
-  <div id="welcome-message" style="display:none;">
-    <p>Boas-vindas! Você está visitando nosso site.</p>
-  </div>
+    <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+        <h1 class="text-center">Bem-vindo ao Projeto Web</h1>
+        
+        <!-- Formulário de Contato -->
+        <form id="contactForm" class="mt-4">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <div id="formMessage" class="mt-3"></div>
 
-  <main>
-    <section>
-      <h2>Conteúdo Principal</h2>
-      <p>Este é um exemplo de página com alternância de tema entre claro e escuro.</p>
-    </section>
-  </main>
+        <!-- Botão de Interatividade -->
+        <button id="welcomeButton" class="btn btn-secondary mt-4">Clique aqui</button>
+        <div id="welcomeMessage" class="mt-3"></div>
 
-  <footer>
-    <p>&copy; 2024 Seu Site. Todos os direitos reservados.</p>
-  </footer>
+        <!-- Botão de Alteração de Tema -->
+        <button id="themeToggle" class="btn btn-dark mt-4">Alternar Tema</button>
 
-  <script src="public/js/script.js"></script>
+        <!-- Botão para abrir uma janela modal -->
+        <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Abrir Janela Modal
+        </button>
+
+        <!-- Janela Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Janela Modal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Alunos: Adicione conteúdo da janela aqui -->
+                        Este é um exemplo de uma janela modal criada com Bootstrap.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adicione outras seções aqui -->
+        <section class="mt-5">
+            <h2>Funcionalidades</h2>
+            <p><!-- Alunos: Detalhe as funcionalidades aqui --></p>
+        </section>
+       
+        <!-- Adicionando a Imagem -->
+        <div class="text-center mt-4">
+            <img src="img/imgProjetoWeb.jpg" alt="Imagem de Exemplo" class="img-fluid rounded">
+        </div>    
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <div class="container">
+            <p>Projeto Web - Grupo X</p>
+            <p>&copy; 2024 - Todos os direitos reservados</p>
+            <p>
+                <a href="#" class="text-white me-3">Política de Privacidade</a>
+                <a href="#" class="text-white">Termos de Serviço</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Importando Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/script.js"></script>
 </body>
 </html>
