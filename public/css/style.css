@@ -69,23 +69,12 @@ img {
     margin-top: 20px;
 }
 
-/* Estilos para a galeria de imagens */
-.gallery {
+/* Estilos para o relógio em tempo real */
+.clock {
     text-align: center;
 }
 
-.thumbnails {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.thumbnail {
-    width: 100px;
-    cursor: pointer;
-}
-
-.featured-image img {
-    max-width: 500px;
-    margin-top: 20px;
+/* Estilos para o contador de cliques */
+.click-counter {
+    text-align: center;
 }
