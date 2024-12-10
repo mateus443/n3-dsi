@@ -33,20 +33,19 @@
     <div class="container mt-5">
         <h1 class="text-center">Bem-vindo ao Projeto Web</h1>
         
-        <!-- Galeria de Imagens -->
-        <div class="gallery mt-4">
-            <h2>Galeria de Imagens</h2>
-            <div class="thumbnails">
-                <img src="public/img/img1.jpg" alt="Imagem 1" class="thumbnail">
-                <img src="public/img/img2.jpg" alt="Imagem 2" class="thumbnail">
-                <img src="public/img/img3.jpg" alt="Imagem 3" class="thumbnail">
-            </div>
-            <div class="featured-image mt-4">
-                <img id="featured" src="public/img/img1.jpg" alt="Imagem Destacada" class="img-fluid rounded">
-            </div>
+        <!-- Relógio em Tempo Real -->
+        <div class="clock mt-4">
+            <h2>Relógio em Tempo Real</h2>
+            <div id="clock" class="display-4"></div>
         </div>
 
-        <!-- Botão para abrir uma janela modal -->
+        <!-- Contador de Cliques -->
+        <div class="click-counter mt-5">
+            <h2>Contador de Cliques</h2>
+            <button id="clickButton" class="btn btn-primary">Clique em mim!</button>
+            <div id="clickCount" class="display-4 mt-3">0</div>
+        </div>
+
         <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Abrir Janela Modal
         </button>
