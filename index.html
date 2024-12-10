@@ -33,24 +33,20 @@
     <div class="container mt-5">
         <h1 class="text-center">Bem-vindo ao Projeto Web</h1>
         
-        <form id="contactForm" class="mt-4">
-            <div class="mb-3">
-                <label for="name" class="form-label">Nome:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+        <!-- Galeria de Imagens -->
+        <div class="gallery mt-4">
+            <h2>Galeria de Imagens</h2>
+            <div class="thumbnails">
+                <img src="public/img/img1.jpg" alt="Imagem 1" class="thumbnail">
+                <img src="public/img/img2.jpg" alt="Imagem 2" class="thumbnail">
+                <img src="public/img/img3.jpg" alt="Imagem 3" class="thumbnail">
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+            <div class="featured-image mt-4">
+                <img id="featured" src="public/img/img1.jpg" alt="Imagem Destacada" class="img-fluid rounded">
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-        <div id="formMessage" class="mt-3"></div>
+        </div>
 
-        <button id="welcomeButton" class="btn btn-secondary mt-4">Clique aqui</button>
-        <div id="welcomeMessage" class="mt-3"></div>
-
-        <button id="themeToggle" class="btn btn-dark mt-4">Alternar Tema</button>
-
+        <!-- Botão para abrir uma janela modal -->
         <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Abrir Janela Modal
         </button>
