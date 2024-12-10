@@ -1,136 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilo geral */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza transições entre temas */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Estilos do Modo Escuro */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+/* Estilos para o tema claro */
+body.light-theme {
+  background-color: #fff;
+  color: #000;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+body.light-theme #welcome-message {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius: 5px;
+  display: none; /* Inicialmente escondido */
 }
 
-header.dark-mode {
-    background-color: #1e1e1e;
+/* Estilos para o tema escuro */
+body.dark-theme {
+  background-color: #121212;
+  color: #fff;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+body.dark-theme #welcome-message {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius: 5px;
+  display: none; /* Inicialmente escondido */
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+/* Estilo do botão de alternância de tema */
+#theme-toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-section {
-    background-color: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-section.dark-mode {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-}
-
-footer {
-    margin-top: 20px;
-    text-align: center;
-    color: #666;
-}
-
-footer.dark-mode {
-    color: #999;
-}
-
-/* Responsividade com media queries */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    main {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Adicionar estilos personalizados para imagens */
-img {
-    max-width: 100%; /* A imagem nunca será maior que o container */
-    height: auto;    /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    margin-top: 20px;
-}
-
-/* Estilo para o formulário de contato */
-form {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form input,
-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-}
-
-form button {
-    padding: 10px 15px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-form button:hover {
-    background-color: #555;
-}
-
-/* Ajuste para modo escuro no formulário */
-form.dark-mode input,
-form.dark-mode textarea {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    border: 1px solid #444;
-}
-
-form.dark-mode button {
-    background-color: #444;
+#theme-toggle-btn:hover {
+  background-color: #006F8E;
 }
