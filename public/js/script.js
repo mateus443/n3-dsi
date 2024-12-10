@@ -1,35 +1,37 @@
-// Função para alternar o tema
-function toggleTheme() {
-  const body = document.body;
-  const currentTheme = body.classList.contains('light-theme') ? 'light' : 'dark';
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Projeto Web - Grupo X está rodando");
 
-  // Alterna entre os temas
-  if (currentTheme === 'light') {
-    body.classList.remove('light-theme');
-    body.classList.add('dark-theme');
-    localStorage.setItem('theme', 'dark');  // Salva a preferência no localStorage
-  } else {
-    body.classList.remove('dark-theme');
-    body.classList.add('light-theme');
-    localStorage.setItem('theme', 'light');  // Salva a preferência no localStorage
-  }
-}
+    // Validação de Formulário
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('formMessage');
 
-// Verifica a preferência de tema salva no localStorage e aplica o tema
-window.onload = () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-theme');
-  } else {
-    document.body.classList.add('light-theme');
-  }
+        if (!name || !email) {
+            message.textContent = 'Por favor, preencha todos os campos.';
+            message.style.color = 'red';
+        } else {
+            message.textContent = 'Formulário enviado com sucesso!';
+            message.style.color = 'green';
+        }
+    });
 
-  // Exibe a mensagem de boas-vindas
-  const welcomeMessage = document.getElementById('welcome-message');
-  if (welcomeMessage) {
-    welcomeMessage.style.display = 'block';  // Exibe a mensagem
-  }
-};
+    // Interatividade na Página Inicial
+    document.getElementById('welcomeButton').addEventListener('click', function() {
+        const message = document.getElementById('welcomeMessage');
+        message.textContent = 'Bem-vindo ao nosso site!';
+    });
 
-// Adiciona um ouvinte de evento para o botão de alternância de tema
-document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    // Alteração de Tema
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelectorAll('section').forEach(section => section.classList.toggle('dark-mode'));
+        document.querySelector('footer').classList.toggle('dark-mode');
+    });
+
+    // Alunos: Adicione interações com o DOM, eventos e lógica do projeto aqui
+
+    // Esse arquivo será trabalhado nas próximas aulas. 
+});
