@@ -2,16 +2,12 @@
   "name": "projeto-web",
   "version": "1.0.0",
   "description": "Projeto Web Responsivo - Grupo X",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.21.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
   },
   "author": "Seu Nome",
   "license": "ISC"
