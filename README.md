@@ -29,3 +29,6 @@ Este projeto é um site web responsivo desenvolvido pelo Grupo X. Ele inclui um 
 3. Inicie o servidor com `node server.js`.
 4. Abra o navegador e acesse `http://localhost:3000`.
 
+
+![Captura de tela 2024-12-11 171505](https://github.com/user-attachments/assets/0839240f-c285-4cd4-8629-d9f21b6cd796)
+
