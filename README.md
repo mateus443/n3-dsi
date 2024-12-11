@@ -1,82 +1,31 @@
-# Projeto Web Responsivo com Bootstrap
+# Projeto Web Responsivo 
 
-Este projeto web é parte de uma atividade acadêmica em que cada grupo de alunos deve desenvolver um tema específico utilizando HTML, CSS e JavaScript. O projeto inclui a integração com Bootstrap para criar uma interface responsiva, com navegação dinâmica e janelas modais. O servidor é gerido pelo Node.js e Express.js.
+## Descrição
+Este projeto é um site web responsivo desenvolvido pelo Grupo X. Ele inclui um relógio em tempo real e um contador de cliques, além de uma interface de navegação simples e estilizada.
 
-### Estrutura do Projeto
+## Novas Funcionalidades Adicionadas
+- **Relógio em Tempo Real:** Exibe a hora atualizada a cada segundo.
+- **Contador de Cliques:** Incrementa e exibe o número de cliques em um botão.
 
- - HTML: Estrutura semântica e conteúdo das páginas.
- - CSS: Estilização avançada utilizando Flexbox e Grid, além da integração com o Bootstrap para componentes de UI.
- - JavaScript: Lógica de interatividade, manipulação do DOM e integração com o Bootstrap para funcionalidades dinâmicas.
+## Documentação dos Prompts
+### Prompt 1
+**Prompt:** "Crie um relógio em tempo real que atualize a cada segundo."
 
-### Padrões de Arquitetura
+**Explicação:** Este prompt foi utilizado para implementar a funcionalidade do relógio em tempo real no arquivo `public/js/script.js`. A IA gerou o código JavaScript necessário para atualizar o relógio a cada segundo e exibi-lo na página.
 
-O projeto segue uma arquitetura organizada em:
+### Prompt 2
+**Prompt:** "Crie um contador de cliques que incremente a cada clique em um botão."
 
- - HTML para a estruturação do conteúdo.
- - CSS para estilização e responsividade.
- - JavaScript para lógica e interatividade.
- - Node.js com Express.js para rodar um servidor local.
+**Explicação:** Este prompt foi utilizado para implementar a funcionalidade do contador de cliques no arquivo `public/js/script.js`. A IA gerou o código JavaScript necessário para incrementar e exibir o número de cliques em um botão.
 
-### Ferramentas e Tecnologias Utilizadas
+### Prompt 3
+**Prompt:** "Estilize a página com CSS para torná-la responsiva e visualmente agradável."
 
- - Bootstrap para componentes de UI responsivos.
- - Flexbox e Grid para layout flexível e responsivo.
- - Node.js com Express.js para gerenciamento do servidor.
- - GitHub Pages para deploy contínuo (se necessário).
+**Explicação:** Este prompt foi utilizado para criar o arquivo `public/css/style.css`, que contém os estilos CSS para a página. A IA gerou o código CSS necessário para tornar a página responsiva e visualmente agradável.
 
-### Estrutura de Pastas
+## Como Usar
+1. Clone o repositório para o seu ambiente local.
+2. Navegue até a pasta do projeto.
+3. Inicie o servidor com `node server.js`.
+4. Abra o navegador e acesse `http://localhost:3000`.
 
-```bash
-/projetoWeb
-│
-├── /public      # Pasta para arquivos estáticos
-│   ├── /css     # Estilos CSS
-│   │   └── style.css
-│   ├── /js      # Arquivos JavaScript
-│   │   └── script.js
-│   └── /img     # Imagens do projeto
-│       └── (colocar imagens do projeto aqui)
-├── index.html   # Arquivo HTML principal
-├── server.js    # Servidor Node.js
-├── package.json # Dependências do projeto
-└── README.md    # Instruções do projeto
-```
-
-### Instalação e Execução do Projeto
-
-Siga os passos abaixo para instalar e rodar o projeto *localmente*.
-
-#### Passo 1: Clonar o Repositório
-
-Clone o repositório para o seu ambiente local:
-
-```bash
-git clone https://github.com/seu-usuario/seu-projeto.git
-```
-
-#### Passo 2: Instalar Dependências
-
-Entre no diretório do projeto e instale as dependências do Node.js:
-
-```bash
-cd projetoWeb
-npm install express
-```
-
-#### Passo 3: Executar o Servidor
-
-Após a instalação das dependências, inicie o servidor local:
-
-```bash
-node server.js
-```
-
-O servidor rodará na porta 3000. Abra o navegador e acesse: http://localhost:3000
-
-Abaixo, segue o modelo da tela inicial que deve aparecer ao acessar o navegador.
-
-![Tela Inicial Projeto Web](https://github.com/brunamichellyos/DSI/blob/main/Aula3/projetoWeb/TelaInicialProjetoWeb.png)
-
-#### Passo 4: Personalização do Projeto
-
-Alunos podem adicionar o conteúdo nas seções e personalizar o código conforme o tema específico de cada grupo. Utilize o *style.css* para adicionar estilos personalizados e *script.js* para lógica interativa.
